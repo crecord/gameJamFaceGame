@@ -1,0 +1,15 @@
+extend layout
+block content
+    div.panel
+        div.back
+            a(href='/').
+                ←
+        div.info.instructions
+            div.text.text-instructions
+                p.
+                    To be an actor simply stare at the computer and imagine each scenario and match each expression. By moving your face and by allowing the light from the computer to reflect off your face you will be performing in a larger story that only the audience can hear, but you cannot.
+                p.
+                    Don't bother with the larger story. The better you follow instructions the higher your grade will be.
+            div.controls
+                a(href='#{storyLink}')
+                    input.btn(id='begin-button', type='button', value='click to begin')

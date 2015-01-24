@@ -1,0 +1,24 @@
+extend layout
+block content
+    div(id='container')
+        video.hidden(id='video-el', width='400', height='300', preload='auto', loop)
+        canvas(id='overlay', width='400', height='300')
+    canvas(id='sketch', width='400', height='300')
+    div(id='emotion-container')
+        div(id='emotion-chart')
+            p(id='angry')
+            p(id='sad')
+            p(id='surprised')
+            p(id='happy')
+    div.controls
+        input.btn(id='start-button', type='button', value='wait, loading video', disabled='disabled')
+block scripts
+    script(type='text/javascript', src='/js/vendor/jquery.js')
+    script(type='text/javascript', src='/js/vendor/util.js')
+    script(type='text/javascript', src='/js/vendor/expression-maker-clmtrackr.js')
+    script(type='text/javascript', src='/js/vendor/models/model-pca-20-svm-emotion-detection.js')
+    script(type='text/javascript', src='/js/vendor/stats.js')
+    script(type='text/javascript', src='/js/vendor/d3.min.js')
+    script(type='text/javascript', src='/js/vendor/emotion-classifier.js')
+    script(type='text/javascript', src='/js/vendor/emotion-model.js')
+    script(type='text/javascript', src='/js/src/expression-maker-scripts.js')

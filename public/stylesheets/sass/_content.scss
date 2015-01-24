@@ -1,0 +1,266 @@
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    // overflow: hidden;
+}
+
+.main-content {
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.back {
+    @include transition(opacity 0.2s ease-in-out 0);
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    a {
+        color: #999;
+        font-size: 20px;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.3;
+        }
+    }
+}
+
+.score {
+    position: absolute;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    right: 15px;
+    top: 10px;
+    display: block;
+    background: #fff;
+    color: #999;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.phrase {
+    @extend %center-element-horiz;
+    font-size: 15px;
+    color: #999;
+    top: 120px;
+    width: 475px;
+    display: block;
+    font-style: italic;
+    line-height: 1.4;
+    z-index: 2;
+}
+
+
+.text {
+    font-size: 15px;
+    color: #999;
+    display: block;
+    line-height: 1.4;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+
+    &.text-welcome {
+        bottom: 127px;
+        width: 300px;
+        // margin: 100px auto 30px;
+    }
+
+    &.text-instructions {
+        bottom: 110px;
+        width: 475px;
+        p {
+            &:not(:first-child) {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    &.text-grades {
+        top: 245px;
+        width: 475px;
+        h2 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+    }
+
+    &.text-story {
+        bottom: 50%;
+        width: 100%;
+
+        &.hide {
+            display: none;
+        }
+    }
+}
+
+.panel {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    text-align: center;
+    margin: 0 auto;
+    width: 650px;
+    height: 480px;
+    position: relative;
+
+    &.panel-story {
+        padding: 40px;
+    }
+
+    .info {
+        width: 100%;
+        height: 100%;
+    }
+
+    .welcome {
+        background: url('../../images/screens/welcome.png') center 25px no-repeat;
+        background-size: 475px auto;
+    }
+
+    .instructions {
+        background: url('../../images/screens/instructions.gif') center 0 no-repeat;
+        background-size: 175px auto;
+    }
+
+    .grades {
+        &.A {
+            background: url('../../images/screens/A.gif') center 20px no-repeat;
+            background-size: 175px auto;
+        }
+        &.B {
+            background: url('../../images/screens/B.gif') center 20px no-repeat;
+            background-size: 175px auto;
+        }
+        &.C {
+            background: url('../../images/screens/C.gif') center 20px no-repeat;
+            background-size: 175px auto;
+        }
+        &.F {
+            background: url('../../images/screens/F.gif') center 20px no-repeat;
+            background-size: 175px auto;
+        }
+    }
+}
+
+.media {
+    width: 470px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.feedback {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.4;
+    // display: none;
+}
+
+#overlay {
+    @include transform(scaleX(-1));
+    -ms-filter : fliph; /*IE*/
+    filter : fliph; /*IE*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width : 600px;
+    height : 450px;
+
+    &.media-canvas {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#video-el {
+    @include transform(scaleX(-1));
+    -ms-filter : fliph; /*IE*/
+    filter : fliph; /*IE*/
+    width : 600px;
+    height : 450px;
+
+    &.media-video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.hidden-canvas {
+    display: none;
+}
+
+#sketch {
+}
+
+.btn {
+    @include transition(opacity 0.2s ease-in-out 0);
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 10px 20px;
+    min-width: 200px;
+    background: #fff;
+    color: #999;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.3;
+    }
+}
+
+.controls {
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 45px;
+}
+
+#icon1, #icon2, #icon3, #icon4, #icon5, #icon6 {
+    visibility : hidden;
+}
+
+#emotion-container {
+    width: 300px;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.emotion-icon {
+    width : 40px;
+    height : 40px;
+    margin-top: 5px;
+    margin-left : 45px;
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+#emotion-icons {
+    height: 50px;
+}
+
+.bar {
+    fill: steelblue;
+    fill-opacity: 0.9;
+}
+

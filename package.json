@@ -1,0 +1,24 @@
+{
+  "name": "blue-lips-clmtrackr",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/notajingoist/blue-lips-clmtrackr.git"
+  },
+  "author": "Caroline Record, Jing Xiao",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.10.4",
+    "jade": "^1.7.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-ruby-sass": "^0.7.1",
+    "nodemon": "^1.2.1"
+  }
+}

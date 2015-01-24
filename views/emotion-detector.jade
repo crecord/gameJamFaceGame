@@ -1,0 +1,27 @@
+extend layout
+block content
+    div(id='container')
+        audio#myAudio(src="/audio/the-ball.mp3", type="audio/mpeg")
+        video(id='video-el', width='400', height='300', preload='auto', loop)
+        canvas(id='overlay', width='400', height='300')
+    canvas.hidden-canvas(id='sketch', width='400', height='300')
+    div(id='emotion-container')
+        div(id='emotion-icons')
+            img.emotion-icon(id='icon1', src='/images/angry.png')
+            img.emotion-icon(id='icon2', src='/images/sad.png')
+            img.emotion-icon(id='icon3', src='/images/surprised.png')
+            img.emotion-icon(id='icon4', src='/images/happy.png')
+        div(id='emotion-chart')
+    div.controls
+        input.btn(id='start-button', type='button', value='wait, loading video', disabled='disabled')
+block scripts
+    script(type='text/javascript', src='/js/vendor/jquery.js')
+    script(type='text/javascript', src='/js/vendor/util.js')
+    script(type='text/javascript', src='/js/vendor/clmtrackr.js')
+    script(type='text/javascript', src='/js/vendor/models/model-pca-20-svm-emotion-detection.js')
+    script(type='text/javascript', src='/js/vendor/stats.js')
+    script(type='text/javascript', src='/js/vendor/d3.min.js')
+    script(type='text/javascript', src='/js/vendor/emotion-classifier.js')
+    script(type='text/javascript', src='/js/vendor/emotion-model.js')
+    script(type='text/javascript', src='/js/src/data/the-ball.js')
+    script(type='text/javascript', src='/js/src/emotion-scripts.js')
