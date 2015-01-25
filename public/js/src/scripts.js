@@ -103,7 +103,7 @@ var BLUELIPS = $.extend(true, {
     getGradeInfo: function() {
 
 
-        if (this.totalWins > 7) {
+        if (this.totalWins > 5) {
             return this.gradeInfo.APlus;
         } 
        else {
@@ -128,7 +128,7 @@ var BLUELIPS = $.extend(true, {
         
         this.$content.html(panel);
         var audioElement = document.createElement('audio');
-		audioElement.setAttribute('src', 'audio/' + gradeInfo.audioFile);
+		audioElement.setAttribute('src', '/audio/' + gradeInfo.audioFile);
 		console.log(gradeInfo.audioFile); 
 		audioElement.play();
         
@@ -424,7 +424,7 @@ var BLUELIPS = $.extend(true, {
             if (isAboveThresh && this.currTargetEmo[i] == 1){
             // I was looking for this emotion and here it is (: green circle with smiley 
              $('.emotion' + i).css({
-            'background': 'url("/images/emotion_green_' + i + '.png") center no-repeat'
+            'background': 'url("/images/emotion_green_' + i + '.gif") center no-repeat'
     		 });
     		
     		
@@ -432,7 +432,7 @@ var BLUELIPS = $.extend(true, {
             else if (!isAboveThresh && this.currTargetEmo[i] == 1){
             	// I am looking for this emotion and it's not here ): just grey circle 
             	$('.emotion' +i).css({
-            	'background': 'url("/images/emotion_glow_' + i + '.png") center no-repeat'
+            	'background': 'url("/images/emotionGoal' + i + '.png") center no-repeat'
             	});
             	isSuccess = false; 
             }

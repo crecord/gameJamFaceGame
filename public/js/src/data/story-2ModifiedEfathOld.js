@@ -78,7 +78,7 @@ var expressions = {
     },
     img8: {
         emotions: {
-            angry: 1,
+            angry: 0,
             sad: 1,
             surprised: 0,
             happy: 0
@@ -100,42 +100,43 @@ var expressions = {
     },
     img10: {
         emotions: {
-            angry: 0,
+            angry: 1,
             sad: 0,
             surprised: 1,
-            happy: 1
+            happy: 0
         },
         templates: [],
         phrase: 'No, no!  I said give me all of my money!  I was yelling because I had an ear infection that day, I could not hear a thing!',
         image: '/images/img10.png'
     },
-         };
+
+};
 
 var data = {
     name: '/story/1',
-    audio: '/audio/theStory.mp3',
+    audio: '/audio/Test2.m4a',
     colors: {
         '0.0':'000000',
         '4.0':'ffff00',
-        '9.0':'000000',
+        '10.0':'000000',
         '15.0':'ff9900',
         '21.0':'000000',
-        '25.0':'ff0000',
+        '26.0':'ff0000',
         '33.0':'000000',
-        '35.0':'0099ff',
-        '49.0':'000000',
-        '57.0':'ff6600',
+        '36.0':'0099ff',
+        '52.0':'000000',
+        '60.0':'ff6600',
     },
     expressions: {
         '0.0':expressions.img1,
         '4.0':expressions.img2,
-        '9.0':expressions.img3,
+        '10.0':expressions.img3,
         '15.0':expressions.img4,
         '21.0':expressions.img5,
-        '25.0':expressions.img6,
+        '26.0':expressions.img6,
         '33.0':expressions.img7,
-        '35.0':expressions.img8,
-        '49.0':expressions.img9,
-        '57.0':expressions.img10,
+        '36.0':expressions.img8,
+        '52.0':expressions.img9,
+        '60.0':expressions.img10,
     }
 };
