@@ -27,7 +27,7 @@ app.get('/instructions/1', function(req, res) {
 app.get('/story/1', function(req, res) {
     res.render('story', {
         title: 'story 1',
-        storyData: 'story-1'
+        storyData: 'story-2ModifiedEfath'
     });
 });
 
@@ -48,7 +48,7 @@ app.get('/instructions/2', function(req, res) {
 app.get('/story/2', function(req, res) {
     res.render('story', {
         title: 'story 2',
-        storyData: 'story-2'
+        storyData: 'story-2ModifiedEfath'
     });
 });
 

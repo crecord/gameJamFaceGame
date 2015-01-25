@@ -1,0 +1,15 @@
+extend layout
+block content
+    div.panel
+        div.back
+            a(href='/').
+                ←
+        div.info.instructions
+            div.text.text-instructions
+                p.
+                    You have been detained by the LAPD and accused of robbing a bank in downtown Los Angeles. Use your facial powers of persuasion to convince the cop to believe your far-fetched story, failing which you will head straight to prison.
+                p.
+                     Each time the cop asks you a question; the computer will provide an answer on your behalf. All you need to do is show the right emotion on your face to match the computer’s reply. You will be given on-screen advice on what emotion to show on your face. Display it correctly and the cop goes easy on you. Display the wrong emotion and the cop grows angrier. 
+            div.controls
+                a(href='#{storyLink}')
+                    input.btn(id='begin-button', type='button', value='click to begin')

@@ -1,0 +1,42 @@
+extend layout
+block content
+    div.score.
+        0.000
+    div.panel.panel-story
+        div.back
+            a(href='/instructions').
+                ←
+        div.text.text-story.
+            Allow your camera to be used to begin acting.
+        p.phrase
+        div.media
+            div.feedback
+            div.face
+            audio(id='audio-src', src='', type='audio/mpeg')
+            video.media-video.hidden(id='video-el', width='400', height='300', preload='auto', loop)
+            canvas.media-canvas(id='overlay', width='400', height='300')
+        canvas.hidden-canvas(id='sketch', width='400', height='300')
+        div.controls
+            input.hide.btn(id='proceed-button', type='button', value='loading...', disabled='disabled')
+        div.all(align='center')
+         div.faces(style='color:blue; display:block; padding:0px 30px;')
+          div.emotion0(style='color:blue; display:inline-block;padding: 0px 50px;background-image: url(http://images.sodahead.com/polls/002828845/4642154917_Happy_smiley_face_answer_5_small.png);background-repeat:no-repeat; min-height:50px;min-width:80px;') 
+          div.emotion1(style='color:blue; display:inline-block;padding: 0px 50px;background-image: url(http://images.sodahead.com/polls/002828845/4642154917_Happy_smiley_face_answer_5_small.png); background-repeat:no-repeat; min-height:50px;min-width:80px;') 
+          div.emotion2(style='color:blue; display:inline-block;padding: 0px 50px;;background-image: url(http://images.sodahead.com/polls/002828845/4642154917_Happy_smiley_face_answer_5_small.png); background-repeat:no-repeat;min-height:50px;min-width:80px;') 
+          div.emotion3(style='color:blue; display:inline-block;padding: 0px 50px;background-image: url(http://images.sodahead.com/polls/002828845/4642154917_Happy_smiley_face_answer_5_small.png); background-repeat:no-repeat;min-height:50px;min-width:80px;')
+
+        div.bars(style='color:blue; display:block;padding:30px;min-height:100px')
+          div.bar0(style='color:blue; display:inline-block;margin-right:40px;padding-left:30px; background-color: #00ff00; min-height:100px; min-width:40px;') 
+          div.bar1(style='color:blue; display:inline-block;margin-right:40px;padding-left:30px; background-color: #00ff00; min-height:100px;min-width:40px;') 
+          div.bar2(style='color:blue; display:inline-block;margin-right:40px;padding-left:30px; background-color: #00ff00; min-height:100px;min-width:40px;') 
+          div.bar3(style='color:blue; display:inline-block;margin-right:40px;padding-left:30px; background-color: #00ff00; min-height:100px;min-width:40px;') 
+
+        div(style='color:blue; display:block;padding:5px 30px;')
+          div(style='color:blue; display:inline-block;margin-right:40px; min-height:20px; width:80px;') Angry
+          div(style='color:blue; display:inline-block;margin-right:40px; min-height:20px;width:80px;') Sad
+          div(style='color:blue; display:inline-block;margin-right:40px; min-height:20px;width:80px;') Surprised
+          div(style='color:blue; display:inline-block;margin-right:40px;min-height:20px;width:80px;') Happy
+block scripts
+    include vendor-scripts
+    script(type='text/javascript', src='/js/src/data/#{storyData}.js')
+    script(type='text/javascript', src='/js/src/scripts.js')

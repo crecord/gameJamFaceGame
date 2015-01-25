@@ -48,21 +48,6 @@ var BLUELIPS = $.extend(true, {
 
     },
 
-    // get position of the audio
-    // change the background color of the document based off the position
-    audioPositionChanged: function() {
-        // Display the current position of the video in a p element with id="demo"
-        this.audioPos = this.audio.currentTime
-        // console.log(this.audioPos);
-        this.colorChange('red', 1);
-        this.colorChange('blue', 2);
-    },
-
-    colorChange: function(color, position) {
-        if (this.audioPos > position){
-            document.body.style.backgroundColor = color;
-        }
-    },
 
     setupVideo: function() {
         navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
