@@ -124,9 +124,14 @@ var BLUELIPS = $.extend(true, {
         var link = '<a href=' + this.name + '>' + button + '</a>';
         var controls = '<div class="controls">' + link + '</div>';
         var info = '<div class="info grades ' + className + '">' + text + controls + '</div>';
-        var panel = '<div class="panel">' + info + '</div>';
-        var audioObject = '<audio controls autoplay style ="display:none;"> <source src=' + gradeInfo.audioFile +' type="audio/mpeg"></audio>'
+        var panel = '<div class="panel">' + info + '</div>';        
+        
         this.$content.html(panel);
+        var audioElement = document.createElement('audio');
+		audioElement.setAttribute('src', 'audio/' + gradeInfo.audioFile);
+		console.log(gradeInfo.audioFile); 
+		audioElement.play();
+        
     },
 
     handleEndScene: function(e) {
